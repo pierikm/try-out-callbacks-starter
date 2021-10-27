@@ -45,9 +45,7 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 let selectiveMap = function(arr, cb1, cb2) {
     for(let i = 0; i < arr.length; i++){
         if(cb1(arr[i])){
-            if(cb2(arr[i])){
-                arr[i] = cb2(arr[i]);
-            }
+            arr[i] = cb2(arr[i]);
         }
     }
     return arr;
