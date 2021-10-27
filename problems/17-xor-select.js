@@ -31,9 +31,9 @@ console.log(
 // [ 'art', 'app', 'buttery' ]
 *******************************************************************************/
 
-let xorSelect = function() {
-
-};
+function xorSelect(arr, cb1, cb2) {
+  return arr.filter(ele => (cb1(ele) || cb2(ele)) && !(cb1(ele) && cb2(ele)))
+}
 
 
 
