@@ -28,9 +28,9 @@ let result4 = none([4, -5, 7, -1], function(n) {
 console.log(result4);   // false
 *******************************************************************************/
 
-let none = function() {
-
-};
+function none(arr, cb) {
+    return 0 === arr.filter((ele, i) => cb(ele, i)).length;
+}
 
 
 
