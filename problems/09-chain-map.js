@@ -29,9 +29,15 @@ console.log(chainMap(4, square, half));         // 8
 console.log(chainMap(4, half, square));         // 4
 *******************************************************************************/
 
-let chainMap = function() {
+function chainMap(value, ...cb) {
+    let newValue = value;
 
-};
+    for (let i = 0; i < cb.length; i++) {
+        newValue = cb[i](newValue);
+    }
+
+    return newValue;
+}
 
 
 
